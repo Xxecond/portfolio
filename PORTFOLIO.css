@@ -183,6 +183,7 @@ hr{height:0.5rem;
     background-color:gray;
     text-align:center;
     padding-top:8rem;
+       position:relative;
     }
 
     #media{
@@ -217,7 +218,9 @@ color:white;
 background-color:#333333; 
 padding:1rem;
 width:100%;
-margin-top:14rem;}
+position:absolute;
+     width:100%;
+     bottom:0;}
 
 button a{ 
      text-decoration: none;
@@ -253,38 +256,3 @@ button a:hover::after{
     width:100%
 }
 
-@media (max-width: 768px) {  
-   #top h4 {  
-      padding-right: 10rem;  
-   }  
-   .design {  
-      font-size: 2rem;  
-   }  
-   #text-content h1 {  
-      font-size: 3rem;  
-   }  
-   #project-container {  
-      gap: 1rem;  
-   }  
-   .project-box {  
-      flex-basis: 45%;  
-   }  
-}  
-  
-@media (max-width: 480px) {  
-   #top h4 {  
-      padding-right: 5rem;  
-   }  
-   .design {  
-      font-size: 1.5rem;  
-   }  
-   #text-content h1 {  
-      font-size: 2rem;  
-   }  
-   #project-container {  
-      gap: 0.5rem;  
-   }  
-   .project-box {  
-      flex-basis: 100%;  
-   }  
-}
