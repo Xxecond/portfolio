@@ -83,11 +83,12 @@ width: 100vw;
         radial-gradient(circle at 90% 80%, rgba(0, 0, 255, 0.5) 0%, rgba(0, 0, 255, 0) 60%), 
         linear-gradient(to bottom, rgba(0, 0, 255, 0.5) 0%, rgba(0, 0, 255, 0) 100%);
     background-size: 100px 100px, 150px 150px, 10px 10px;
+    flex-wrap:wrap;
     }
 
 #profile-pic {
-    width: 100%;
-    height:auto%;
+    width: 35%;
+    height:66%;
     border-radius: 10%;
     margin-right:85rem;
     margin-top:3rem;
@@ -99,7 +100,7 @@ width: 100vw;
     padding-left:60rem;
   margin-top:-30rem;
     font-family:times ;
-overflow: hidden;
+flex:1;
 width:0;
 border-right: 0px solid black;
     animation: typewriter 4s steps(25, end)1s  forwards, colorChange 10s infinite;
