@@ -178,13 +178,12 @@ hr{height:0.5rem;
     border:none;
     background:blue;}
     
-#space{height:100vh;
+#space{height:95vh;
     width: 100vw;
     background-color:gray;
     text-align:center;
     padding-top:8rem;
-       position:relative;
-    }
+       }
 
     #media{
         font-size:5rem;
@@ -216,11 +215,8 @@ font-size:2rem;
 text-align:center;
 color:white;
 background-color:#333333; 
-padding:1rem;
-width:100%;
-position:absolute;
-     width:100%;
-     bottom:0;}
+padding:1rem;;
+}
 
 button a{ 
      text-decoration: none;
