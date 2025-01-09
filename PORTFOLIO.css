@@ -100,7 +100,7 @@ width: 100%;
      padding:2rem;
 }
 #text-content h1{
-    font-size: clamp12rem;
+    font-size: clamp(3rem, 9vw, 15rem);
     font-family:times ;
     overflow: hidden;
     white-space: nowrap;
