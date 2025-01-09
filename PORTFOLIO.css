@@ -100,7 +100,7 @@ width: 100%;
      padding:2rem;
 }
 #text-content h1{
-    font-size: 12rem;
+    font-size: clamp12rem;
     font-family:times ;
     overflow: hidden;
     white-space: nowrap;
@@ -108,8 +108,13 @@ flex:1;
 width:0;
 border-right: 0.1rem solid black;
     animation: typewriter 4s steps(25, end)1s  forwards, colorChange 10s infinite;
-
 }
+
+@media(max-width:768px){
+    #text-content h1{
+        font-size:3rem;
+    }
+    }
 
 @keyframes typewriter {
     from {
