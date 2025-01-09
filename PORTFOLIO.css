@@ -89,16 +89,16 @@ width: 100%;
     width: 35%;
     height:66%;
     border-radius: 10%;
-    margin-right:85rem;
     object-fit: cover;
 }
 
 .cont{
     display:flex;
-     flex-wrap:wrap;
+     flex-wrap:nowrap;
+     align-items: center;
+     gap:5rem;
      padding:2rem;
-
-gap:0;}
+}
 #text-content h1{
     font-size: 12rem;
     padding-left:53rem;
