@@ -857,9 +857,13 @@ button a:hover::after {
     .p-2 {
         font-size: 1.5rem;
     }
+    .switch {
+        width: 40px;
+        height: 18px;
+      }
+    .slider:before {
+        height: 13px;
+        width: 13px;
+      }
 
-    hr {
-     bottom:90rem;
-    }
-    
 }
