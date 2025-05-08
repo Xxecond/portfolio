@@ -152,13 +152,13 @@ h2 {
 }
 
 #projects {
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
     padding: 2rem;
     background-color: #008080;
     text-align: center;
+    overflow: auto;
     font-size: 5rem;
-    margin-bottom: 2rem;
 }
 
 .project-title{
@@ -169,7 +169,7 @@ font-size:3rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5rem 15rem;
+    gap: 2rem 10rem;
     animation: slideIn 5s steps(25, end) forwards;
 }
 
