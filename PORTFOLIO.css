@@ -489,7 +489,7 @@ button a:hover::after {
         left: 3px;
         bottom: 3px;
         background-color: white;
-        transition: .4s;
+        transition: 4s;
         border-radius: 50%;
       }
       input:checked + .slider {
@@ -857,13 +857,19 @@ button a:hover::after {
     .p-2 {
         font-size: 1.5rem;
     }
+
+    
+    hr {
+        bottom:2rem;
+       }
+
     .switch {
-        width: 40px;
+        width: 35px;
         height: 18px;
       }
     .slider:before {
-        height: 13px;
-        width: 13px;
+        height: 12px;
+        width: 12px;
       }
 
 }
