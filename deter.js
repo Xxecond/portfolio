@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             name: "PORTFOLIO",
             className: "Sleft",
             text: "TAP TO VIEW",
-            liveLink: https:"//portfolioo-wx2k-git-main-xxeconds-projects.vercel.app/"
+            liveLink: "https://portfolioo-wx2k-git-main-xxeconds-projects.vercel.app/"
         },
         {
             id: 4,
