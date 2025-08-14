@@ -10,7 +10,7 @@ html {
     font-size: 67%;
     font-family: tahoma;
     scroll-behavior: smooth;
-    color-scheme: light;
+    color-scheme: dark;
 }
 
 body {
@@ -414,12 +414,15 @@ font-size:3rem;
     padding: 10px 0;
 }
 
-hr {
+#foot::before{
+    content:'';
+    position: relative;
+    top:0;
     width: 100%;
-    border-top: 1px solid white;
- position: relative;  
- bottom:1.7rem;
+    height: 30px;
+    background-color: #fff;
 }
+
 
 button a {
     text-decoration: none;
@@ -514,6 +517,10 @@ button a:hover::after {
 
 /*color-scheme*/
 
+.light-mode{
+    color-scheme:light;
+}
+
 .light-mode body {
     background-color: #fff;
     color: #000;
@@ -554,6 +561,7 @@ button a:hover::after {
     border-right-color: #000;
     animation: typewriter 4s steps(25, end) 1s forwards, lightColorChange 10s infinite;
 }
+
 
 @keyframes lightColorChange {
     0% {

@@ -5,21 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
             name: "BLOGGER-APPLICATION",
             className: "Stop",
             text: "TAP TO VIEW",
-            liveLink: "https://xxecond.github.io/blogger"
+            liveLink: "https://blogger-git-main-xxeconds-projects.vercel.app/"
         },
         {
             id: 2,
             name: "RESTAURANT SITE",
             className: "Sright",
             text: "TAP TO VIEW",
-            liveLink: "https://xxecond.github.io/restaurant/"
+            liveLink: "https://restaurant-git-main-xxeconds-projects.vercel.app/"
         },
         {
             id: 3,
             name: "PORTFOLIO",
             className: "Sleft",
             text: "TAP TO VIEW",
-            liveLink: "https://xxecond.github.io/portfolio/"
+            liveLink: "https://portfolio-git-main-xxeconds-projects.vercel.app/"
         },
         {
             id: 4,
@@ -59,10 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Theme toggle switch
-    const toggle = document.getElementById("theme-toggle");
-    if (toggle) {
-        toggle.addEventListener("change", () => {
-            document.body.classList.toggle("light-mode"); // Changed from "dark-mode" to "light-mode"
-        });
-    }
+const toggleBtn = document.getElementById("theme-toggle");
+
+// Listen for a click on the button
+toggleBtn.addEventListener("click", () => {
+      document.documentElement.classList.toggle("light-mode");;
+    
 });
+
+    });
