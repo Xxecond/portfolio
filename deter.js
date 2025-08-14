@@ -5,21 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
             name: "BLOGGER-APPLICATION",
             className: "Stop",
             text: "TAP TO VIEW",
-            liveLink: "https://blogger-git-main-xxeconds-projects.vercel.app/"
+            liveLink: "https://blogger-red.vercel.app/"
         },
         {
             id: 2,
             name: "RESTAURANT SITE",
             className: "Sright",
             text: "TAP TO VIEW",
-            liveLink: "https://restaurant-git-main-xxeconds-projects.vercel.app/"
+            liveLink: "https://restaurant-zeta-khaki.vercel.app/"
         },
         {
             id: 3,
             name: "PORTFOLIO",
             className: "Sleft",
             text: "TAP TO VIEW",
-            liveLink: "https://portfolioo-wx2k-git-main-xxeconds-projects.vercel.app/"
+            liveLink: "https://portfolioo-wx2k.vercel.app/"
         },
         {
             id: 4,
