@@ -151,6 +151,37 @@ h2 {
     font-family: monospace;
 }
 
+.resume-btn{
+   position:absolute;
+   display:inline-block;
+   padding: 10px;
+   background-color: white;
+   color:orange;
+   text-decoration: none;
+   font-size: 3rem;
+   border-radius:6px;
+   bottom:5rem;
+   left:95rem;
+   font-size: 5rem;
+   font-weight: bolder;
+   animation:beat 3s infinite;
+}
+.resume-btn:hover{
+    color:white;
+    background-color: orange;
+}
+
+@keyframes beat {
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+
+
+
 #projects {
     height: 100vh;
     width: 100vw;
@@ -576,6 +607,15 @@ hr {
     }
 }
 
+.light-mode .resume-btn{
+    color:black;
+    background-color:blue;
+}
+.light-mode .resume-btn:hover{
+   background-color: black;
+   color:blue;
+}
+
 .light-mode #projects {
     background-color: #fff;
 }
@@ -709,9 +749,14 @@ hr {
         position: relative;
     }
 
+    .resume-btn{
+   bottom:23rem;
+   left:43rem;
+   font-size: 3rem;
+}
+
     #project-container {
         gap: 4rem;
-
     }
 
     .project-box {
