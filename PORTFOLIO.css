@@ -155,7 +155,7 @@ h2 {
     height: 100vh;
     width: 100vw;
     padding: 2rem;
-    background-color: #008080;
+    background-color: #333;
     text-align: center;
     overflow: auto;
     font-size: 5rem;
@@ -263,7 +263,7 @@ font-size:3rem;
     justify-content: center;
     display: flex;
     width: 58vh;
-    height: 45vh;
+    height: 40vh;
     background-color: black;
     color: white;
     align-items: center;
@@ -352,11 +352,11 @@ font-size:3rem;
 }
 
 #space {
-    min-height: 95vh;
+    min-height: 94vh;
     width: 100vw;
-    background-color: gray;
+    background-color: #333;
     text-align: center;
-    padding-top: 8rem;
+    padding-top: 7rem;
 }
 
 #media {
@@ -577,7 +577,7 @@ hr {
 }
 
 .light-mode #projects {
-    background-color: #25bfb7;
+    background-color: #fff;
 }
 
 .light-mode .project-title{
@@ -595,7 +595,7 @@ hr {
 }
 
 .light-mode #space {
-    background-color: white;
+    background-color: #fff;
 }
 
 .light-mode #media li a {
@@ -741,7 +741,6 @@ hr {
     #space {
         min-height: 95vh;
         width: 100vw;
-        background-color: gray;
         text-align: center;
         padding-top: 9rem;
     }
