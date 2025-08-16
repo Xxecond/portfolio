@@ -57,14 +57,17 @@ document.addEventListener("DOMContentLoaded", () => {
         link.appendChild(box);
         container.appendChild(link);
     });
-
-    // Theme toggle switch
 const toggleBtn = document.getElementById("theme-toggle");
 
-// Listen for a click on the button
-toggleBtn.addEventListener("click", () => {
-      document.documentElement.classList.toggle("light-mode");;
-    
+document.documentElement.classList.add("light-mode");
+toggleBtn.checked = false;
+
+toggleBtn.addEventListener("change", () => {
+    if (toggleBtn.checked) {
+        document.documentElement.classList.remove("light-mode");
+    } else {
+        document.documentElement.classList.add("light-mode");
+    }
 });
 
-    });
+});
