@@ -832,13 +832,25 @@ hr {
     #top h4 {
         padding-right: 3.2rem;
         font-size: 1.4rem;
-        bottom: 0.5rem;
-
+        bottom: 0.2rem;
     }
+
+    
+    h4.project-title{
+        font-size:1.4rem}
 
 
     #top li:first-of-type a {
         font-size: 1.2rem;
+    }
+
+    .name{
+        font-size:1.8rem;
+padding-right:1rem;
+    }
+
+    .design{
+        font-size:2.1rem;
     }
 
     #top li a {
@@ -851,7 +863,6 @@ hr {
    font-size: 1.5rem;
     }
 
-    
     #project-container {
         gap: 2rem;
     }
@@ -862,6 +873,7 @@ hr {
         width: 21vh;
         font-size: 1rem;
     }
+
 
     .projects {
         font-size: 1.8rem;
