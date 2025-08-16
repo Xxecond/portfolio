@@ -1,89 +1,3 @@
-    // === Projects Data ===
-    const projects = [
-        {
-            id: 1,
-            name: "BLOGGER APPLICATION",
-            image1: "blo.jpg",
-            image2: "blo2.jpg",
-            desc: "A user-friendly platform that allows you to create, read, update and delete blog posts.Built with React and Vite, with a clean and responsive UI.",
-            liveLink: "https://blogger-red.vercel.app/"
-        },
-        {
-            id: 2,
-            name: "RESTAURANT WEBSITE",
-            image1: "rest.jpg",
-            image2: "rest2.jpg",
-            desc:  "A user-friendly platform that allows customers to browse a menu, view detailed food items and place orders.Built with React and Vite, and ideal for showcasing restaurant dishes online.",
-            liveLink: "https://restaurant-zeta-khaki.vercel.app/"
-        },
-    {
-        id: 4,
-        name: "PORTFOLIO WEBSITE",
-        image1: "port.jpg",
-        image2: "port2.jpg",
-        desc: "A showcase of my personal devlopment project, skills and contact info. users can view project and explore my tech stack.Built with React and vite, it's responsive and easy to navigate.",
-        liveLink: "https://portfolio-peach-one-98.vercel.app/"
-    },
-        {
-            id: 3,
-            name: "E-COMMERCE STORE",
-            image1: "comin.jpg",
-            image2: "comin2.jpg",
-            desc: "A showcase of my personal devlopment project, skills and contact info. users can view project and explore my tech stack.Built with React and vite, it's responsive and easy to navigate.This project is currently in development. Check back later!😊",
-            liveLink: "https://your-ecommerce-link.com"
-        }
-    ];
-
-    // === Render Projects ===
-    const container = document.getElementById("project-container");
-
-    projects.forEach(project => {
-        const section = document.createElement("section");
-        section.classList.add("project");   // full screen
-
-section.innerHTML = `
-    <div class="project-card">
-        <img src="${project.image1}" alt="${project.name}" class="project-image top">
-        <img src="${project.image2}" alt="${project.name}" class="project-image">
-    </div>
-    <div class="project-info">
-        <h2>${project.name}<a href="${project.liveLink}" target="_blank" class="project-link-btn">View live</a></h2>
-        <p>${project.desc}</p>
-    </div>
-`;
-
-
-        container.appendChild(section);
-    });
-
-
-    //TIMEOUT
-    const cards = document.querySelectorAll(".project-card");
-
-cards.forEach(card => {
-    let timer; // store timeout
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const topImage = card.querySelector(".project-image.top");
-
-            if(entry.isIntersecting && entry.intersectionRatio === 1){ 
-                // fully visible
-                timer = setTimeout(() => {
-                    topImage.style.transform = "translateX(-100%)";
-                }, 1700); // 2 seconds(milliseconds)
-            } else {
-                // left viewport or partially visible, reset
-                clearTimeout(timer);
-                topImage.style.transform = "translateX(0)";
-            }
-        });
-    }, { threshold: 1.0 }); // threshold 1.0 = fully visible
-
-    observer.observe(card);
-});
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("theme-toggle");
 
@@ -99,4 +13,91 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // === Projects Data ===
+    const projects = [
+        {
+            id: 1,
+            name: "BLOGGER APPLICATION",
+            image1: "blo.jpg",
+            image2: "blo2.jpg",
+            desc: "A user-friendly platform that allows you to create, read, update and delete blog posts. Built with React and Vite, with a clean and responsive UI.",
+            liveLink: "https://blogger-red.vercel.app/"
+        },
+        {
+            id: 2,
+            name: "RESTAURANT WEBSITE",
+            image1: "rest.jpg",
+            image2: "rest2.jpg",
+            desc:  "A user-friendly platform that allows customers to browse a menu, view detailed food items and place orders. Built with React and Vite, ideal for showcasing restaurant dishes online.",
+            liveLink: "https://restaurant-zeta-khaki.vercel.app/"
+        },
+        {
+            id: 3,
+            name: "E-COMMERCE STORE",
+            image1: "comin.jpg",
+            image2: "comin2.jpg",
+            desc: "A showcase of my personal development project. Users can view projects and explore my tech stack. Built with React and Vite. Currently in development. Check back later! 😊",
+            liveLink: "https://your-ecommerce-link.com"
+        },
+        {
+            id: 4,
+            name: "PORTFOLIO WEBSITE",
+            image1: "port.jpg",
+            image2: "port2.jpg",
+            desc: "A showcase of my personal development project, skills, and contact info. Users can view projects and explore my tech stack. Built with React and Vite, responsive and easy to navigate.",
+            liveLink: "https://portfolio-peach-one-98.vercel.app/"
+        }
+    ];
+
+    // === Render Projects ===
+    const container = document.getElementById("project-container");
+
+    projects.forEach(project => {
+        const section = document.createElement("section");
+        section.classList.add("project");
+
+        section.innerHTML = `
+            <div class="project-card">
+                <img src="${project.image1}" alt="${project.name}" class="project-image top">
+                <img src="${project.image2}" alt="${project.name}" class="project-image">
+            </div>
+            <div class="project-info">
+                <h2>${project.name} <a href="${project.liveLink}" target="_blank" class="project-link-btn">View Project</a></h2>
+                <p>${project.desc}</p>
+            </div>
+        `;
+
+        container.appendChild(section);
+
+        const card = section.querySelector(".project-card");
+        const images = card.querySelectorAll(".project-image");
+        let current = 0; // track which image is on top
+
+        // === Click-to-toggle image ===
+        card.addEventListener("click", () => {
+            images[current].style.zIndex = 1;
+            current = (current + 1) % images.length;
+            images[current].style.zIndex = 2;
+        });
+
+        // === Timer-based auto-slide ===
+        let timer;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const topImage = images[0];
+                if(entry.isIntersecting && entry.intersectionRatio === 1){
+                    // fully visible
+                    timer = setTimeout(() => {
+                        topImage.style.transform = "translateX(-100%)";
+                    }, 1710); // 1.7 seconds= mil
+                } else {
+                    // reset if not fully visible
+                    clearTimeout(timer);
+                    topImage.style.transform = "translateX(0)";
+                }
+            });
+        }, { threshold: 1.0 });
+
+        observer.observe(card);
+    });
 });
