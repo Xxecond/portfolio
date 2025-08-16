@@ -1,19 +1,3 @@
-/// deter.js
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleBtn = document.getElementById("theme-toggle");
-
-    // === Theme Toggle ===
-    document.documentElement.classList.add("light-mode");
-    toggleBtn.checked = false;
-
-    toggleBtn.addEventListener("change", () => {
-        if (toggleBtn.checked) {
-            document.documentElement.classList.remove("light-mode");
-        } else {
-            document.documentElement.classList.add("light-mode");
-        }
-    });
-
     // === Projects Data ===
     const projects = [
         {
@@ -71,4 +55,48 @@ section.innerHTML = `
 
         container.appendChild(section);
     });
+
+
+    //TIMEOUT
+    const cards = document.querySelectorAll(".project-card");
+
+cards.forEach(card => {
+    let timer; // store timeout
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const topImage = card.querySelector(".project-image.top");
+
+            if(entry.isIntersecting && entry.intersectionRatio === 1){ 
+                // fully visible
+                timer = setTimeout(() => {
+                    topImage.style.transform = "translateX(-100%)";
+                }, 1700); // 2 seconds(milliseconds)
+            } else {
+                // left viewport or partially visible, reset
+                clearTimeout(timer);
+                topImage.style.transform = "translateX(0)";
+            }
+        });
+    }, { threshold: 1.0 }); // threshold 1.0 = fully visible
+
+    observer.observe(card);
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("theme-toggle");
+
+    // === Theme Toggle ===
+    document.documentElement.classList.add("light-mode");
+    toggleBtn.checked = false;
+
+    toggleBtn.addEventListener("change", () => {
+        if (toggleBtn.checked) {
+            document.documentElement.classList.remove("light-mode");
+        } else {
+            document.documentElement.classList.add("light-mode");
+        }
+    });
+
 });
