@@ -8,17 +8,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
-    <!-- Toggle Theme Switch -->
+  <!-- Toggle Theme Switch -->
   <label class="switch">
     <input type="checkbox" id="theme-toggle" />
     <span class="slider"></span>
   </label>
 
+  <!-- Home Section -->
   <div class="section" id="home">  
     <header>  
       <ul id="top">  
         <h4>PORTFOLIO</h4>  
-        <li id="home"><a href="#home">HOME</a></li>  
+        <li><a href="#home">HOME</a></li>  
         <li><a href="#projects">PROJECTS</a></li>  
         <li><a href="#about-me">CONTACT ME</a></li>  
       </ul>  
@@ -36,30 +37,30 @@
     <a href="CV.pdf" target="_blank" class="resume-btn">View Resume</a> 
   </div>  
 
-  <div class="section" id="projects">  
-    <section>  
-      <h4 class="project-title">MY PROJECTS</h4>  
-      <div id="project-container"></div>  
-    </section>
-    <button><a href="#home">HOME</a></button>  
-  </div>  
+  <!-- Projects Section (dynamic via deter.js) -->
+  <section id="projects">
+    <h1 class="project-title">My Projects</h1>
+    <div id="project-container"></div>
+  </section>
 
+  <!-- About Me Section -->
   <div class="section" id="about-me">  
     <div id="space">  
       <p class="p-1">LET'S WORK TOGETHER.</p>  
       <p class="p-2">GET IN TOUCH:</p>  
       <ul id="media">
-<li><a href="https://wa.me/0531467213" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
-<li><a href="mailto:andrewsampadu9@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
-<li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-<li><a href="https://x.com/maners_999shit" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+        <li><a href="https://wa.me/0531467213" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+        <li><a href="mailto:andrewsampadu9@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="https://x.com/maners_999shit" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
       </ul>
       <button><a href="#home">HOME</a></button>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer id="foot"><hr />&copy; AndrewsAmpadu2024 | All Rights Reserved</footer>
 
-  <script src="deter.js"  defer></script>
+  <script src="deter.js" defer></script>
 </body>
 </html>
