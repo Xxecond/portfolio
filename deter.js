@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             image1: "port.jpg",
             image2: "port2.jpg",
             desc: "A showcase of my personal development project, skills, and contact info. Users can view projects and explore my tech stack. Built with React and Vite, responsive and easy to navigate.",
-            liveLink: "https://portfolio-peach-one-98.vercel.app/"
+            liveLink: "https://portfolioo-wx2k.vercel.app/"
         },
                 {
             id: 3,
