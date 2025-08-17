@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${project.image2}" alt="${project.name}" class="project-image">
             </div>
             <div class="project-info">
-                <h2>${project.name} <a href="${project.liveLink}" target="_blank" class="project-link-btn">View Project</a></h2>
+                <h2>${project.name} <a href="${project.liveLink}" target="_blank" class="project-link-btn">View Live</a></h2>
                 <p>${project.desc}</p>
             </div>
         `;
