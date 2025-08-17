@@ -28,16 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
             name: "RESTAURANT WEBSITE",
             image1: "rest.jpg",
             image2: "rest2.jpg",
-            desc:  "A user-friendly platform that allows customers to browse a menu, view detailed food items and place orders. Built with React and Vite, ideal for showcasing restaurant dishes online.",
+            desc:  "A user-friendly interface that allows customers to browse a menu, view detailed food items and place orders. Built with React and Vite, ideal for showcasing restaurant dishes online.",
             liveLink: "https://restaurant-zeta-khaki.vercel.app/"
-        },
-        {
-            id: 3,
-            name: "E-COMMERCE STORE",
-            image1: "comin.jpg",
-            image2: "comin2.jpg",
-            desc: "A showcase of my personal development project. Users can view projects and explore my tech stack. Built with React and Vite. Currently in development. Check back later! 😊",
-            liveLink: "https://your-ecommerce-link.com"
         },
         {
             id: 4,
@@ -46,7 +38,16 @@ document.addEventListener("DOMContentLoaded", () => {
             image2: "port2.jpg",
             desc: "A showcase of my personal development project, skills, and contact info. Users can view projects and explore my tech stack. Built with React and Vite, responsive and easy to navigate.",
             liveLink: "https://portfolio-peach-one-98.vercel.app/"
+        },
+                {
+            id: 3,
+            name: "E-COMMERCE STORE",
+            image1: "comin.jpg",
+            image2: "comin2.jpg",
+            desc: "An application interface powered by react + Vite framework that highlights a simple layout with search, product grid, and category navigation. Currently under development.",
+            liveLink: "https://your-ecommerce-link.com"
         }
+
     ];
 
     // === Render Projects ===

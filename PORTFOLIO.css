@@ -99,6 +99,7 @@ color:white;
     height: 66%;
     border-radius: 10%;
     object-fit: cover;
+border: 2px solid black;
 }
 
 .cont {
@@ -547,7 +548,7 @@ hr {
 
 .light-mode .project-link-btn:hover {
   background: blue;
-  color: #000;
+  color: #fff;
 }
 
 
