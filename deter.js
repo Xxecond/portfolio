@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
             name: "E-COMMERCE STORE",
             image1: "comin.jpg",
             image2: "comin2.jpg",
-            desc: "An application interface powered by react + Vite framework that highlights a simple layout with search, product grid, and category navigation. Currently under development.",
+            desc:"An application interface powered by React + Vite framework that highlights a simple, modern layout with search, product grid, and category navigation. Currently under active development.",
             liveLink: "https://your-ecommerce-link.com"
         }
 

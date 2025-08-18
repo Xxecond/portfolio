@@ -38,25 +38,55 @@ body {
 
     #top h4 {
         padding-right: 30rem;
-        font-size: 2.5rem;
+        font-size: 2rem;
         position: relative;
         bottom: 0.5rem;
     }
 
 .name{
-    font-size: 4rem;
+    display:inline-block;
+    position:relative;
+    top:-2rem;
+    font-size: 3rem;
+    font-weight:lighter;
 }
 
 .design {
+    display:inline-block;
+    position:relative;
+    right:10rem;
+    top:0.8rem;
+    font-size: 3rem;
     font-family: 'Comic Sans MS', 'Chalkboard';
-    font-size: 4rem;
+    font-size: 3rem;
     padding-left: 5rem;
     color: orange;
 }
 
+.resume-btn{
+   padding: 10px;
+   color:orange;
+   text-decoration: none;
+   font-size: 2rem;
+   border-radius:6px;
+   border: 1px solid orange;
+   font-weight: bolder;
+   animation:beat 3s infinite;
+   display:inline-block;
+   position:relative;
+   left:20rem;
+   bottom:5rem;
+} 
+
+.resume-btn:hover{
+    color:white;
+    background-color: orange;
+}
+
+
 #top li:first-of-type a {
     font-weight: bolder;
-    font-size: 2.1rem;
+    font-size: 1.3rem;
     text-decoration-line: underline;
 color:white;
 }
@@ -64,7 +94,7 @@ color:white;
 #top li a {
     text-decoration: none;
     color: white;
-    font-size: 2.0rem;
+    font-size: 1.2rem;
     position:relative;
 }
 
@@ -110,7 +140,7 @@ border: 2px solid black;
 }
 
 #text-content h1 {
-    font-size: clamp(3rem, 9vw, 15rem);
+    font-size: clamp(2.5rem, 8vw, 13rem);
     font-family: times;
     overflow: hidden;
     flex: 1;
@@ -118,7 +148,6 @@ border: 2px solid black;
     border-right: 0.1rem solid black;
     animation: typewriter 4s steps(25, end)1s forwards, colorChange 10s infinite;
 }
-
 
 @keyframes typewriter {
     from {
@@ -152,26 +181,6 @@ h2 {
     font-family: monospace;
 }
 
-.resume-btn{
-   position:absolute;
-   bottom:6rem;
-   left:86rem;
-   display:inline-block;
-   padding: 10px;
-   background-color: white;
-   color:orange;
-   text-decoration: none;
-   font-size: 3rem;
-   border-radius:6px;
-   font-weight: bolder;
-   animation:beat 3s infinite;
-}
-
-.resume-btn:hover{
-    color:white;
-    background-color: orange;
-}
-
 @keyframes beat {
     0%, 100%{
         transform: scale(1);
@@ -182,6 +191,12 @@ h2 {
 }
 
 /* --- PROJECTS SECTION --- */
+.project-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
 #projects {
   padding: 3rem;
   background: var(--bg-color, #333);
@@ -189,21 +204,15 @@ h2 {
   text-align: center;
 }
 
-.project-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  letter-spacing: 2px;
-}
-
 /* Container for all projects */
 #project-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0;  /* no giant blank space */
+  display:grid ;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding:2rem;
 }
 
 .project {
-  height: 100vh;        /* full screen */
+    height:100vh;
   display: flex;
   flex-direction: column; /* stack card + info vertically */
   align-items: center;
@@ -264,12 +273,12 @@ h2 {
   display: flex;
   align-items: center;
   justify-content:flex-start;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin: 0 0 0.5rem;
   text-align: left;
 }
 .project-info p {
-    font-size:1.4rem;
+    font-size:1.1rem;
     line-height: 1.4;
     font-family:Arial, Helvetica, sans-serif;
 }
@@ -315,7 +324,6 @@ h2 {
 }
 
 #media {
-    font-size: 5rem;
     list-style: none;
     display: flex;
     gap: 2.3rem;
@@ -327,7 +335,7 @@ h2 {
 #media li a {
     color: goldenrod;
     transition: 0.4s;
-    font-size: 5.5rem;
+    font-size: 3.5rem;
 }
 
 @keyframes bounce {
@@ -346,18 +354,18 @@ h2 {
 
 .p-1 {
     padding-top: 10rem;
-    font-size: 5.5rem;
+    font-size: 3rem;
     font-weight: bold
 }
 
 .p-2 {
-    padding-top: 6rem;
+    padding-top: 3rem;
     padding-bottom: 2rem;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 #foot {
-    font-size: 1.6rem;
+    font-size: 1rem;
     min-height: 7vh;
     color: white;
     background-color: #333;
@@ -374,7 +382,7 @@ button a {
     text-decoration: none;
     color: white;
     background-color: transparent;
-    font-size: 3.0rem;
+    font-size: 1.3rem;
     position: relative;
 }
 
@@ -510,12 +518,13 @@ hr {
 }
 
 .light-mode .resume-btn{
-    color:black;
-    background-color:blue;
+  border: 1px solid blue;
+  color: blue;  
 }
+
 .light-mode .resume-btn:hover{
-   background-color: black;
-   color:blue;
+    background: blue;
+    color:#fff;
 }
 
 .light-mode #projects {
@@ -606,10 +615,10 @@ hr {
 
 
 /*tablet screen sizing*/
-@media(max-width:860px) {
+@media(max-width:1023px) {
 
     #text-content h1 {
-        font-size: clamp(1.9rem, 7vw, 5.5rem);
+        font-size: clamp(1.8rem, 6vw, 5rem);
     }
 
     .cont {
@@ -635,38 +644,39 @@ hr {
 
     #top h4 {
         padding-right: 8rem;
-        font-size: 1.9rem;
+        font-size: 1.6rem;
         bottom: 0.5rem;
     }
 
      h4.project-title {
-        font-size:1.9rem;
+        font-size:1.7rem;
     }
 
 
     .name {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .design {
         font-family: 'Comic Sans MS', 'Chalkboard', cursive;
-        font-size: 2.6rem;
+        font-size: 2.5rem;
         padding-left: 5rem;
     }
 
     #top li:first-of-type a {
         font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
     #top li a {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .resume-btn{
-   bottom:21.6rem;
-   left:43rem;
-   font-size: 2rem;
+   font-size: 1.4rem;
+   left:14rem;
+    bottom:3rem;
+
 }
 
     #project-container {
@@ -692,11 +702,6 @@ hr {
         padding: 0 10px;
     }
 
-    button a {
-        font-size: 1.8rem;
-    }
-
-
     #space {
         min-height: 95vh;
         width: 100vw;
@@ -705,24 +710,26 @@ hr {
     }
 
      #media {
-        gap: 1.8rem;
+        gap: 1.4rem;
         margin-top: 0.5rem
     }
 
     #media li a {
-        font-size: 3.5rem;
+        font-size: 1.8rem;
     }
     .p-1 {
-        padding-top: 10rem;
-        font-size: 3.5rem;
+        font-size: 2.3rem;
         font-weight: bold
     }
 
     .p-2 {
-        padding-top: 5rem;
-        padding-bottom: 2rem;
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
+
+    
+    button a {
+    font-size: 1rem;
+}
 
     #foot {
         font-size: 1rem;
@@ -737,7 +744,7 @@ hr {
 
 
 /*mobile screen sizing */
-@media (max-width:550px) {
+@media (max-width:767px) {
 
     .cont {
         gap: 1.5rem;
@@ -746,7 +753,7 @@ hr {
 
     #top h4 {
         padding-right: 3.2rem;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         bottom: 0.2rem;
     }
 
@@ -754,31 +761,28 @@ hr {
     h4.project-title{
         font-size:1.4rem}
 
-
-    #top li:first-of-type a {
-        font-size: 1.2rem;
-    }
-
     .name{
-        font-size:1.8rem;
-        font-weight: lighter;
-        padding-right:1rem;
+        font-size:2rem;
     }
 
     .design{
-        font-size:2.1rem;
+        font-size:2rem;
         font-weight: bold;
     }
 
+
+        #top li:first-of-type a {
+        font-size: 1rem;
+    }
+    
     #top li a {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 
     .resume-btn{
-   bottom:33rem;
-   left:24rem;
-   font-size: 1.4rem;
-    }
+   font-size: 1.2rem;
+    left:12rem;
+}
 
 
     #project-container {
@@ -803,27 +807,22 @@ hr {
         padding: 0 5px;
     }
 
-    button a {
-        font-size: 1.5rem;
-    }
-
     #space {
         overflow: hidden;
         padding-top: 4rem;
     }
 
     #media li a {
-        font-size: 4.5rem;
-    }
-
-    .p-1 {
-        font-size: 2.4rem;
-    }
-
-    .p-2 {
         font-size: 1.5rem;
     }
 
+    .p-1 {
+        font-size: 2rem;
+    }
+
+    .p-2 {
+        font-size: 1.2rem;
+    }
     
     hr {
         bottom:2rem;
