@@ -766,6 +766,8 @@ hr {
     }
 
     .design{
+        top:5rem;
+        left:20rem;
         font-size:2rem;
         font-weight: bold;
     }
