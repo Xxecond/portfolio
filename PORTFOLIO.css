@@ -46,7 +46,6 @@ body {
 .name{
     display:inline-block;
     position:relative;
-    top:-2rem;
     font-size: 3rem;
     font-weight:lighter;
 }
@@ -55,7 +54,7 @@ body {
     display:inline-block;
     position:relative;
     right:10rem;
-    top:0.8rem;
+    top:1.5rem;
     font-size: 3rem;
     font-size: 3rem;
     font-family:cursive;
@@ -760,12 +759,10 @@ hr {
         font-size:1.4rem}
 
     .name{
-        top:1rem;
         font-size:2rem;
     }
 
     .design{
-        left:2rem;
         font-size:2rem;
         font-weight: bold;
     }
