@@ -46,13 +46,16 @@ body {
 .name{
     font-size: 3rem;
     font-weight:lighter;
+    position:relative;
+    bottom:2rem;
 }
 
 .design {
     display:inline-block;
     position:relative;
     right:10rem;
-    top:1.8rem;
+    top:1.5rem;
+    padding-top:0;
     font-size: 3rem;
     font-size: 3rem;
     font-family:cursive;
@@ -71,7 +74,7 @@ body {
    display:inline-block;
    position:relative;
    left:20rem;
-   bottom:5rem;
+   bottom:4.4rem;
 } 
 
 .resume-btn:hover{
@@ -648,15 +651,6 @@ hr {
         font-size:1.7rem;
     }
 
-
-    .name {
-        font-size: 2.5rem;
-    }
-
-    .design {
-        font-size: 2.5rem;
-    }
-
     #top li:first-of-type a {
         font-weight: bold;
         font-size: 1.1rem;
@@ -666,11 +660,18 @@ hr {
         font-size: 1rem;
     }
 
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .design {
+        font-size: 2.5rem;
+    top:0.2rem;
+    }
+
     .resume-btn{
    font-size: 1.4rem;
    left:14rem;
-    bottom:3rem;
-
 }
 
     #project-container {
@@ -755,16 +756,6 @@ hr {
     h4.project-title{
         font-size:1.4rem}
 
-    .name{
-        font-size:2rem;
-    }
-
-    .design{
-        font-size:2rem;
-        font-weight: bold;
-        padding-top:0;
-    }
-
 
         #top li:first-of-type a {
         font-size: 1rem;
@@ -773,6 +764,16 @@ hr {
     #top li a {
         font-size: 0.9rem;
     }
+
+    .name{
+        font-size:2rem;
+    }
+
+    .design{
+        font-size:2rem;
+        font-weight: bold;
+    }
+
 
     .resume-btn{
    font-size: 1.2rem;
