@@ -762,12 +762,12 @@ hr {
         font-size:1.4rem}
 
     .name{
+        top:1rem;
         font-size:2rem;
     }
 
     .design{
-        top:5rem;
-        left:20rem;
+        left:10rem;
         font-size:2rem;
         font-weight: bold;
     }
