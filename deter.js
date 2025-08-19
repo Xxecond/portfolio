@@ -78,7 +78,7 @@ headerObserver.observe(mainHeader);
                 <img src="${project.image2}" alt="${project.name}" class="project-image">
             </div>
             <div class="project-info">
-                <h2>${project.name} <a href="${project.liveLink}" target="_blank" class="project-link-btn">View Live</a></h2>
+                <h2>${project.name} <a href="${project.liveLink}" target="_blank" class="project-link-btn">Live</a></h2>
                 <p>${project.desc}</p>
             </div>
         `;
@@ -110,7 +110,7 @@ headerObserver.observe(mainHeader);
                     topImage.style.transform = "translateX(0)";
                 }
             });
-        }, { threshold: 1.0 });
+        }, { threshold: 0.7 });
 
         observer.observe(card);
     });
