@@ -21,9 +21,9 @@ body {
     margin: 0;
 }
 
-#home {
-    background-color: #333;
-    color: #ffff;
+.hamburger, 
+#fullscreen-nav ul, .close-btn{
+    display: none;
 }
 
 #top {
@@ -36,12 +36,11 @@ body {
     text-align: center;
 }    
 
-    #top h4 {
-        padding-right: 30rem;
-        font-size: 2rem;
-        position: relative;
-        bottom: 0.5rem;
-    }
+header h4 {
+text-align: center;
+position:relative;
+top:2rem;
+font-size: 1.5rem;}
 
 .name{
     font-size: 3rem;
@@ -86,7 +85,6 @@ body {
 #top li:first-of-type a {
     font-weight: bolder;
     font-size: 1.3rem;
-    text-decoration-line: underline;
 color:white;
 }
 
@@ -424,7 +422,7 @@ hr {
     /* Switch Styling */
     .switch {
         position: fixed;
-        top: 5px;
+        top: 15px;
         left: 10px;
         display: inline-block;
         width: 50px;
@@ -612,10 +610,93 @@ hr {
     bottom: 1.7rem;
 }
 
+.light-mode  .hamburger {
+    color:black;
+}
+
+.light-mode #fullscreen-nav {
+  background: blue;
+}
+
+.light-mode #fullscreen-nav ul li a {
+  color:white;
+}
+
 
 /*tablet screen sizing*/
 @media(max-width:1023px) {
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    color:white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
 
+#fullscreen-nav {
+  position: fixed;
+  top: 0;
+  left: -100%;   /* hidden by default */
+  width: 100%;
+  height: 100%;
+  background: orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.4s ease-in-out;
+  z-index: 1000;
+}
+
+/* When active (JS will add .active) */
+#fullscreen-nav.active {
+  left: 0;
+}
+
+/* --- NAV LINKS --- */
+#fullscreen-nav ul {
+display: block;
+    list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#fullscreen-nav ul li {
+  margin: 20px 0;
+}
+
+#fullscreen-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+#fullscreen-nav ul li a:hover {
+  font-weight: bolder;
+  text-decoration: underline ;
+  text-decoration-thickness: 5px;
+}
+
+.close-btn {
+ display: block;
+    position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+  
     #text-content h1 {
         font-size: clamp(1.8rem, 6vw, 5rem);
     }
@@ -637,27 +718,17 @@ hr {
     }
 
     #top {
-        gap: 1rem;
-        height: 2.8rem;
+        display: none;
     }
 
-    #top h4 {
-        padding-right: 8rem;
-        font-size: 1.6rem;
-        bottom: 0.5rem;
+    header h4 {
+    text-align: center;
+    position:relative;
+    top:2rem;
+    font-size: 1.2rem;
     }
-
      h4.project-title {
         font-size:1.7rem;
-    }
-
-    #top li:first-of-type a {
-        font-weight: bold;
-        font-size: 1.1rem;
-    }
-
-    #top li a {
-        font-size: 1rem;
     }
 
     .name {
@@ -741,26 +812,9 @@ hr {
     .cont {
         gap: 1.5rem;
     }
-
-
-    #top h4 {
-        padding-right: 3.2rem;
-        font-size: 1.3rem;
-        bottom: 0.2rem;
-    }
-
     
     h4.project-title{
         font-size:1.4rem}
-
-
-        #top li:first-of-type a {
-        font-size: 1rem;
-    }
-    
-    #top li a {
-        font-size: 0.9rem;
-    }
 
     .name{
         font-size:2rem;

@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             desc: "A showcase of my personal development project, skills, and contact info. Users can view projects and explore my tech stack. Built with React and Vite, responsive and easy to navigate.",
             liveLink: "https://portfolioo-wx2k.vercel.app/"
         },
-                {
+        {
             id: 3,
             name: "E-COMMERCE STORE",
             image1: "comin.jpg",
@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
             desc:"An application interface powered by React + Vite framework that highlights a simple, modern layout with search, product grid, and category navigation. Currently under active development.",
             liveLink: "https://your-ecommerce-link.com"
         }
-
     ];
 
     // === Render Projects ===
@@ -72,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const card = section.querySelector(".project-card");
         const images = card.querySelectorAll(".project-image");
-        let current = 0; // track which image is on top
+        let current = 0;
 
         // === Click-to-toggle image ===
         card.addEventListener("click", () => {
@@ -87,12 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
             entries.forEach(entry => {
                 const topImage = images[0];
                 if(entry.isIntersecting && entry.intersectionRatio === 1){
-                    // fully visible
                     timer = setTimeout(() => {
                         topImage.style.transform = "translateX(-100%)";
-                    }, 1710); // 1.7 seconds= mil
+                    }, 1710);
                 } else {
-                    // reset if not fully visible
                     clearTimeout(timer);
                     topImage.style.transform = "translateX(0)";
                 }
@@ -100,5 +97,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }, { threshold: 1.0 });
 
         observer.observe(card);
+    });
+
+    // === Fullscreen Nav Toggle ===
+    const hamburger = document.getElementById("hamburger");
+    const fullscreenNav = document.getElementById("fullscreen-nav");
+    const closeBtn = document.querySelector(".close-btn");
+
+    // Open nav
+    hamburger.addEventListener("click", () => {
+        fullscreenNav.classList.add("active");
+    });
+
+    // Close nav
+    closeBtn.addEventListener("click", () => {
+        fullscreenNav.classList.remove("active");
+    });
+
+    // Auto-close when a link is clicked
+    const navLinks = fullscreenNav.querySelectorAll("a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            fullscreenNav.classList.remove("active");
+        });
     });
 });

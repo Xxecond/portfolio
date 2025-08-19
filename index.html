@@ -8,39 +8,52 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
+
   <!-- Toggle Theme Switch -->
   <label class="switch">
     <input type="checkbox" id="theme-toggle" />
     <span class="slider"></span>
   </label>
 
-  <!-- Home Section -->
-  <div class="section" id="home">  
-    <header>  
-      <ul id="top">  
-        <h4>PORTFOLIO</h4>  
-        <li><a href="#home">HOME</a></li>  
-        <li><a href="#projects">PROJECTS</a></li>  
-        <li><a href="#about-me">CONTACT ME</a></li>  
-      </ul>  
-    </header>  
+  <header>
+    <h4>PORTFOLIO</h4>
+    <ul id="top">
+      <li><a href="#home">HOME</a></li>  
+      <li><a href="#projects">PROJECTS</a></li>  
+      <li><a href="#about-me">CONTACT ME</a></li>  
+    </ul>
+    <button class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
 
-    <div id="first-box">  
-      <div class="cont">
-        <img src="PIC.jpg" alt="Andrews profile picture" id="profile-pic" />  
-        <div id="text-content">  
-          <h1>WELCOME!!</h1>
-        </div> 
-      </div>
-      <h2>
-        <span class="name">I'm Andrews,</span>
-        <span class="design">a web developer.</span>
-      </h2>   
-      <a href="CV.pdf" target="_blank" class="resume-btn">View Resume</a> 
-    </div>  
+  <!-- Fullscreen Nav (hidden by default) -->
+  <nav id="fullscreen-nav">
+    <button class="close-btn" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+    <ul>
+      <li><a href="#home">HOME</a></li>  
+      <li><a href="#projects">PROJECTS</a></li>  
+      <li><a href="#about-me">CONTACT ME</a></li>  
+    </ul>
+  </nav>
+
+  <!-- First Box -->
+  <div id="home"></div> <!-- ✅ Added missing "home" anchor -->
+  <div id="first-box">  
+    <div class="cont">
+      <img src="PIC.jpg" alt="Andrews profile picture" id="profile-pic" />  
+      <div id="text-content">  
+        <h1>WELCOME!!</h1>
+      </div> 
+    </div>
+    <h2>
+      <span class="name">I'm Andrews,</span>
+      <span class="design">a web developer.</span>
+    </h2>   
+    <a href="CV.pdf" target="_blank" class="resume-btn">View Resume</a> 
   </div>  
 
-  <!-- Projects Section (dynamic via deter.js) -->
+  <!-- Projects Section -->
   <section id="projects">
     <h1 class="project-title">My Projects</h1>
     <div id="project-container"></div>
@@ -52,9 +65,9 @@
       <p class="p-1">LET'S WORK TOGETHER.</p>  
       <p class="p-2">GET IN TOUCH:</p>  
       <ul id="media">
-        <li><a href="https://wa.me/0531467213" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+        <li><a href="https://wa.me/233531467213" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li> <!-- ✅ Fixed WhatsApp link -->
         <li><a href="mailto:andrewsampadu9@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
-        <li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/andrews-ampadu-a2672b323" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li> <!-- ✅ Direct LinkedIn -->
         <li><a href="https://x.com/maners_999shit" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
       </ul>
       <button><a href="#home">HOME</a></button>
@@ -62,7 +75,7 @@
   </div>
 
   <!-- Footer -->
-  <footer id="foot"><hr />&copy; AndrewsAmpadu2025 | All Rights Reserved</footer>
+  <footer id="foot"><hr />&copy; 2025 Andrews Ampadu | All Rights Reserved</footer>
 
   <script src="deter.js" defer></script>
 </body>
