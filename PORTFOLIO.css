@@ -27,9 +27,7 @@
         top: 0;
         left: 0;
         width: 100%;
-       background: rgba(0, 0, 0, 0.7);
-
-    
+       background: rgba(0, 0, 0, 0.7);    
         color: black;
         text-align: center;
         font-weight: bold;
@@ -93,6 +91,7 @@
             transition:4s;
             border-radius: 24px;
         }
+        
         .slider:before {
             position: absolute;
             content: "";
@@ -110,46 +109,6 @@
         input:checked + .slider:before {
             transform: translateX(26px);
         }
-
-    .name{
-        font-size: 3rem;
-        font-weight:lighter;
-        position:relative;
-        bottom:2rem;
-    }
-
-    .design {
-        display:inline-block;
-        position:relative;
-        right:10rem;
-        top:1.5rem;
-        padding-top:0;
-        font-size: 3rem;
-        font-size: 3rem;
-        font-family:cursive;
-        color: orange;
-    }
-
-    .resume-btn{
-    padding: 10px;
-    color:orange;
-    text-decoration: none;
-    font-size: 2rem;
-    border-radius:6px;
-    border: 1px solid orange;
-    font-weight: bolder;
-    animation:beat 3s infinite;
-    display:inline-block;
-    position:relative;
-    left:20rem;
-    bottom:4.4rem;
-    } 
-
-    .resume-btn:hover{
-        color:white;
-        background-color: orange;
-    }
-
 
     #top li:first-of-type a {
         font-weight: bolder;
@@ -202,12 +161,14 @@
         display: flex;
         align-items: center;
         gap: 5rem;
-        padding: 2rem;
+        padding: 1rem;
+        padding-top: 5rem;
     }
 
     #text-content h1 {
         font-size: clamp(2.5rem, 8vw, 13rem);
         font-family: times;
+        margin-top: 3rem;
         overflow: hidden;
         flex: 1;
         width: 0;
@@ -241,10 +202,49 @@
 
 
     h2 {
-        font-size: 5rem;
         text-align: left;
-        padding-left: 4rem;
+        padding-left: 2rem;
+        padding-top:2rem;;
+    }
+
+    .name{
+        font-size: 3rem;
         font-family: monospace;
+        font-weight:lighter;
+        position:relative;
+        bottom:2rem;
+    }
+
+    .design {
+        display:inline-block;
+        position:relative;
+        right:10rem;
+        top:1.5rem;
+        padding-top:0;
+        font-size: 3rem;
+        font-size: 3rem;
+        font-family:cursive;
+        color: orange;
+    }
+
+    .resume-btn{
+    padding: 10px;
+    color:orange;
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius:6px;
+    border: 1px solid orange;
+    font-weight: bolder;
+    animation:beat 3s infinite;
+    display:inline-block;
+    position:relative;
+    left:20rem;
+    bottom:4rem;
+    } 
+
+    .resume-btn:hover{
+        color:white;
+        background-color: orange;
     }
 
     @keyframes beat {
@@ -715,8 +715,8 @@
     .close-btn {
     display: block;
         position: absolute;
-    top: 20px;
-    right: 30px;
+    top: -10px;
+    right: 20px;
     font-size: 2rem;
     background: none;
     border: none;
@@ -729,7 +729,7 @@
         }
 
         .cont {
-            gap: 2rem;
+            gap: 5rem;
         }
 
         #first-box {
@@ -769,7 +769,7 @@
 
         .resume-btn{
     font-size: 1.4rem;
-    left:14rem;
+    left:16rem;
     }
 
         #project-container {
@@ -836,10 +836,6 @@
     /*mobile screen sizing */
     @media (max-width:767px) {
 
-        .cont {
-            gap: 1.5rem;
-        }
-        
         h4.project-title{
             font-size:1.4rem}
 
@@ -855,7 +851,7 @@
 
         .resume-btn{
     font-size: 1.2rem;
-        left:12rem;
+        left:11rem;
     }
 
 
