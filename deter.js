@@ -36,7 +36,7 @@ headerObserver.observe(mainHeader);
             name: "BLOGGER APPLICATION",
             image1: "blo.jpg",
             image2: "blo2.jpg",
-            desc: "A user-friendly platform that allows you to create, read, update and delete blog posts. Built with React and Vite, with a clean and responsive UI.",
+            desc: "A highly intuitive, user-friendly platform that allows you to effortlessly create, read, update, and delete blog posts efficiently. Built with React and Vite, with a clean and responsive UI.",
             liveLink: "https://blogger-red.vercel.app/"
         },
         {
@@ -44,7 +44,7 @@ headerObserver.observe(mainHeader);
             name: "RESTAURANT WEBSITE",
             image1: "rest.jpg",
             image2: "rest2.jpg",
-            desc:  "A user-friendly interface that allows customers to browse a menu, view detailed food items and place orders. Built with React and Vite, ideal for showcasing restaurant dishes online.",
+            desc:  "A user-friendly interface that allows customers to easily browse a menu, view detailed food items, and place orders online. Built with React and Vite, ideal for showcasing restaurant dishes online.",
             liveLink: "https://restaurant-zeta-khaki.vercel.app/"
         },
         {
