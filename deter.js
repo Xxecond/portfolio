@@ -12,6 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
             document.documentElement.classList.add("light-mode");
         }
     });
+    // Sticky Header when main header scrolls out of view
+const mainHeader = document.querySelector("header");
+const stickyHeader = document.getElementById("sticky-header");
+
+const headerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting){
+            stickyHeader.classList.add("active"); // show sticky header
+        } else {
+            stickyHeader.classList.remove("active"); // hide sticky header
+        }
+    });
+}, { threshold: 0 }); // trigger when any part of header leaves viewport
+
+headerObserver.observe(mainHeader);
+
 
     // === Projects Data ===
     const projects = [

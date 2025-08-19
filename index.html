@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
-
-  <!-- Toggle Theme Switch -->
   <label class="switch">
     <input type="checkbox" id="theme-toggle" />
     <span class="slider"></span>
   </label>
 
   <header>
-    <h4>PORTFOLIO</h4>
+<div id="sticky-header">
+</div>
+  <h4>PORTFOLIO</h4>
     <ul id="top">
       <li><a href="#home">HOME</a></li>  
       <li><a href="#projects">PROJECTS</a></li>  
@@ -27,7 +27,6 @@
     </button>
   </header>
 
-  <!-- Fullscreen Nav (hidden by default) -->
   <nav id="fullscreen-nav">
     <button class="close-btn" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
     <ul>
@@ -37,8 +36,7 @@
     </ul>
   </nav>
 
-  <!-- First Box -->
-  <div id="home"></div> <!-- ✅ Added missing "home" anchor -->
+  <div id="home"></div>
   <div id="first-box">  
     <div class="cont">
       <img src="PIC.jpg" alt="Andrews profile picture" id="profile-pic" />  
@@ -74,7 +72,6 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer id="foot"><hr />&copy; 2025 Andrews Ampadu | All Rights Reserved</footer>
 
   <script src="deter.js" defer></script>
