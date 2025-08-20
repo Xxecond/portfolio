@@ -686,7 +686,7 @@
 
 
     /*tablet screen sizing*/
-    @media(max-width:1023px) {
+    @media(max-width:950px) {
         .hamburger {
             display: block;
             position: fixed;
@@ -877,7 +877,7 @@
 
 
     /*mobile screen sizing */
-    @media (max-width:767px) {
+    @media (max-width:570px) {
 
         h4.project-title {
             font-size: 1.4rem
