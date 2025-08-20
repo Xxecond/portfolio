@@ -101,7 +101,7 @@ headerObserver.observe(mainHeader);
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 const topImage = images[0];
-                if(entry.isIntersecting && entry.intersectionRatio === 1){
+                if(entry.isIntersecting && entry.intersectionRatio > 0.7){
                     timer = setTimeout(() => {
                         topImage.style.transform = "translateX(-100%)";
                     }, 1710);
