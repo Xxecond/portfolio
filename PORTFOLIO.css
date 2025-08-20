@@ -21,7 +21,7 @@
         margin: 0;
     }
 
-
+         /*header section*/
     #sticky-header {
         position: fixed;
         top: 0;
@@ -66,8 +66,7 @@
     text-align: center;
 }
 
-
-    .switch {
+.switch {
             position: fixed;
             top: 15px;
             left: 8px;
@@ -142,7 +141,7 @@
         font-weight: bolder;
         color: white;
     }
-
+                /*home section*/
     #first-box {
         text-align: center;
         min-height: 100vh;
@@ -256,7 +255,7 @@
         }
     }
 
-    /* --- PROJECTS SECTION --- */
+    /* PROJECTS SECTION */
        #projects {
     padding: 3rem;
     background: var(--bg-color, #333);
@@ -270,7 +269,6 @@
     letter-spacing: 2px;
     }
 
-    /* Container for all projects */
     #project-container {
     display:grid ;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -286,7 +284,6 @@
     position: relative;
     }
 
-    /* Card holding the two images + description */
   .project-card {
     position: relative;
     width: 80%;
@@ -599,15 +596,6 @@
 
     .light-mode .design {
         color: blue;
-    }
-
-
-    .light-mode hr {
-
-        width: 100%;
-        border-top: 1px solid black;
-        position: relative;
-        bottom: 1.7rem;
     }
 
     .light-mode  .hamburger {
