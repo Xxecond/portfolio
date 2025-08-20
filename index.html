@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
   <link rel="stylesheet" href="PORTFOLIO.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
+
 <body>
   <label class="switch">
     <input type="checkbox" id="theme-toggle" />
     <span class="slider"></span>
   </label>
-    <!--Header section-->
+  <!--Header section-->
   <header>
-<div id="sticky-header">
-</div>
-  <h4>PORTFOLIO</h4>
+    <div id="sticky-header">
+    </div>
+    <h4>PORTFOLIO</h4>
     <ul id="top">
-      <li><a href="#home">HOME</a></li>  
-      <li><a href="#projects">PROJECTS</a></li>  
-      <li><a href="#about-me">CONTACT ME</a></li>  
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#about-me">CONTACT ME</a></li>
     </ul>
     <button class="hamburger" id="hamburger">
       <i class="fa-solid fa-bars"></i>
@@ -30,26 +32,26 @@
   <nav id="fullscreen-nav">
     <button class="close-btn" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
     <ul>
-      <li><a href="#home">HOME</a></li>  
-      <li><a href="#projects">PROJECTS</a></li>  
-      <li><a href="#about-me">CONTACT ME</a></li>  
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#about-me">CONTACT ME</a></li>
     </ul>
   </nav>
 
   <div id="home"></div>
-  <div id="first-box">  
+  <div id="first-box">
     <div class="cont">
-      <img src="PIC.jpg" alt="Andrews profile picture" id="profile-pic" />  
-      <div id="text-content">  
+      <img src="PIC.jpg" alt="Andrews profile picture" id="profile-pic" />
+      <div id="text-content">
         <h1>WELCOME!!</h1>
-      </div> 
+      </div>
     </div>
     <h2 class="name-box">
-      <span class="name">I'm Andrews,</span>
-      <span class="design">a web developer.</span>
-    </h2>   
-    <a href="CV.pdf" target="_blank" class="resume-btn">View Resume</a> 
-  </div>  
+      <p class="name">I'm Andrews,</p>
+      <p class="design">a web developer.</p>
+    </h2>
+    <a href="CV.pdf" target="_blank" class="resume-btn">View Resume</a>
+  </div>
 
   <!-- Projects Section -->
   <section id="projects">
@@ -58,20 +60,37 @@
   </section>
 
   <!-- About Me Section -->
-  <div class="section" id="about-me">  
-    <div id="space">  
-      <p class="p-1">LET'S WORK TOGETHER.</p>  
-      <p class="p-2">GET IN TOUCH:</p>  
+  <div class="section" id="about-me">
+    <div id="space">
+      <p class="p-1">LET'S WORK TOGETHER.</p>
+      <p class="cta-txt">Interested in building something impactful? I'm open to collaborations and exciting opportunities.</p>
+      <p class="p-2">GET IN TOUCH:</p>
       <ul id="media">
-        <li><a href="https://wa.me/233531467213" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li> <!-- ✅ Fixed WhatsApp link -->
-        <li><a href="mailto:andrewsampadu9@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/andrews-ampadu-a2672b323" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li> <!-- ✅ Direct LinkedIn -->
-        <li><a href="https://x.com/maners_999shit" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+        <li><a href="https://wa.me/233531467213" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a></li>
+        
+        <li><a href="mailto:andrewsampadu9@gmail.com" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/andrews-ampadu-a2672b323" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-linkedin"></i></a></li> <!-- ✅ Direct LinkedIn -->
+        <li><a href="https://x.com/maners_999shit" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a></li>
       </ul>
+      <div class="availability">
+        <p>Based in Accra, Ghana</p>
+        <p>Available for remote and onsite opportunities worldwide</p>
+      </div>
       <button><a href="#home">HOME</a></button>
     </div>
   </div>
-  <footer id="foot">&copy; 2025 Andrews Ampadu | All Rights Reserved</footer>
+  <footer id="foot">
+    <div class="footer-content">
+      <p>&copy; 2025 Andrews Ampadu | All Rights Reserved</p>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </div>
+  </footer>
   <script src="deter.js" defer></script>
 </body>
+
 </html>
