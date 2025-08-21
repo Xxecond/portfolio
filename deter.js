@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("theme-toggle");
 
-    // === Theme Toggle ===
+    //Theme Toggle
     document.documentElement.classList.add("light-mode");
     toggleBtn.checked = false;
 
@@ -13,23 +13,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     // Sticky Header when main header scrolls out of view
-const mainHeader = document.querySelector("header");
-const stickyHeader = document.getElementById("sticky-header");
-
-const headerObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if(!entry.isIntersecting){
-            stickyHeader.classList.add("active"); // show sticky header
-        } else {
-            stickyHeader.classList.remove("active"); // hide sticky header
-        }
-    });
-}, { threshold: 0 }); // trigger when any part of header leaves viewport
-
-headerObserver.observe(mainHeader);
+    const mainHeader = document.querySelector("header");
+    const stickyHeader = document.getElementById("sticky-header");
+    const headerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                stickyHeader.classList.add("active"); // show sticky header
+            } else {
+                stickyHeader.classList.remove("active"); // hide sticky header
+            }
+        });
+    }, { threshold: 0 }); // trigger when any part of header leaves viewport
+    headerObserver.observe(mainHeader);
 
 
-    // === Projects Data ===
+    // Projects Data
     const projects = [
         {
             id: 1,
@@ -44,7 +42,7 @@ headerObserver.observe(mainHeader);
             name: "RESTAURANT WEBSITE",
             image1: "rest.jpg",
             image2: "rest2.jpg",
-            desc:  "A user-friendly interface that allows customers to easily browse a menu, view detailed food items, and place orders online. Built with React and Vite, ideal for showcasing restaurant dishes online.",
+            desc: "A user-friendly interface that allows customers to easily browse a menu, view detailed food items, and place orders online. Built with React and Vite, ideal for showcasing restaurant dishes online.",
             liveLink: "https://restaurant-zeta-khaki.vercel.app/"
         },
         {
@@ -60,12 +58,12 @@ headerObserver.observe(mainHeader);
             name: "E-COMMERCE STORE",
             image1: "comin.jpg",
             image2: "comin2.jpg",
-            desc:"An application interface powered by React + Vite framework that highlights a simple, modern layout with search, product grid, and category navigation. Currently under active development.",
+            desc: "An application interface powered by React + Vite framework that highlights a simple, modern layout with search, product grid, and category navigation. Currently under active development.",
             liveLink: "https://your-ecommerce-link.com"
         }
     ];
 
-    // === Render Projects ===
+    //Render Projects
     const container = document.getElementById("project-container");
 
     projects.forEach(project => {
@@ -89,19 +87,19 @@ headerObserver.observe(mainHeader);
         const images = card.querySelectorAll(".project-image");
         let current = 0;
 
-        // === Click-to-toggle image ===
+        // Click-to-toggle card (image) 
         card.addEventListener("click", () => {
             images[current].style.zIndex = 1;
             current = (current + 1) % images.length;
             images[current].style.zIndex = 2;
         });
 
-        // === Timer-based auto-slide ===
+        //  Timer for card slide (swipe)
         let timer;
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 const topImage = images[0];
-                if(entry.isIntersecting && entry.intersectionRatio > 0.7){
+                if (entry.isIntersecting && entry.intersectionRatio > 0.7) {
                     timer = setTimeout(() => {
                         topImage.style.transform = "translateX(-100%)";
                     }, 1710);
@@ -115,11 +113,10 @@ headerObserver.observe(mainHeader);
         observer.observe(card);
     });
 
-    // === Fullscreen Nav Toggle ===
+    // Fullscreen Nav Toggle
     const hamburger = document.getElementById("hamburger");
     const fullscreenNav = document.getElementById("fullscreen-nav");
     const closeBtn = document.querySelector(".close-btn");
-
     // Open nav
     hamburger.addEventListener("click", () => {
         fullscreenNav.classList.add("active");
