@@ -50,21 +50,63 @@
         display: none;
     }
 
-    #top {
-        position: fixed;
-        top: 20px;
-        right: 2rem;
+    #header {
         display: flex;
-        gap: 2rem;
-        list-style: none;
-        z-index: 30;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
     }
 
-    header h4 {
-        position: relative;
-        top: 2rem;
+    #title {
+        flex: 1;
         font-size: 1.5rem;
         text-align: center;
+        color: white;
+    }
+
+    #nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 2rem;
+        list-style: none;
+        text-decoration: none;
+        display: flex;
+        gap: 2rem;
+        z-index: 25;
+    }
+
+    #nav li:first-of-type a {
+        font-weight: bolder;
+        font-size: 1.3rem;
+        color: white;
+    }
+
+    #nav li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        position: relative;
+    }
+
+    #nav li a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0.5rem;
+        background: white;
+        left: 0;
+        bottom: -4px;
+        transition: width 0.3s;
+    }
+
+    #nav li a:hover::after {
+        width: 100%;
+    }
+
+    #nav li a:hover {
+        font-weight: bolder;
+        color: white;
     }
 
     .switch {
@@ -113,39 +155,6 @@
 
     input:checked+.slider:before {
         transform: translateX(26px);
-    }
-
-    #top li:first-of-type a {
-        font-weight: bolder;
-        font-size: 1.3rem;
-        color: white;
-    }
-
-    #top li a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.2rem;
-        position: relative;
-    }
-
-    #top li a::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 0.5rem;
-        background: white;
-        left: 0;
-        bottom: -4px;
-        transition: width 0.3s;
-    }
-
-    #top li a:hover::after {
-        width: 100%;
-    }
-
-    #top li a:hover {
-        font-weight: bolder;
-        color: white;
     }
 
     /*home section*/
@@ -317,6 +326,7 @@
         height: 100%;
         object-fit: fill;
         transition: transform 0.6s ease;
+        transform: translateX(100%);
     }
 
     .project-image.top {
@@ -324,6 +334,15 @@
         transition: transform 0.6s ease;
         z-index: 2;
     }
+
+
+    .project-image.active {
+  transform: translateX(0);       /* visible */
+}
+
+.project-image.prev {
+  transform: translateX(-100%);   /* moved left */
+}
 
     .project-card:hover .project-image.top {
         transform: translateX(-100%);
@@ -533,19 +552,23 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .light-mode #top li a {
+    .light-mode #title {
+        color: black;
+    }
+
+    .light-mode #nav li a {
         color: #000;
     }
 
-    .light-mode #top li a:hover {
+    .light-mode #nav li a:hover {
         color: black;
     }
 
-    .light-mode #top li:first-of-type a {
+    .light-mode #nav li:first-of-type a {
         color: black;
     }
 
-    .light-mode #top li a::after {
+    .light-mode #nav li a::after {
         background: black;
     }
 
@@ -612,7 +635,6 @@
         color: #fff;
     }
 
-
     .light-mode #space {
         background-color: #fff;
     }
@@ -624,7 +646,6 @@
     .light-mode #media li a:hover {
         color: cyan;
     }
-
 
     .light-mode #foot {
         background-color: #fff;
@@ -780,18 +801,18 @@
             margin-top: 40px;
         }
 
-        #top {
+        #header {
             display: none;
         }
 
-        header h4 {
+        #title {
             text-align: center;
             position: relative;
             top: 2rem;
             font-size: 1.2rem;
         }
 
-        h4.project-title {
+        .project-title {
             font-size: 1.7rem;
         }
 
@@ -879,7 +900,7 @@
     /*mobile screen sizing */
     @media (max-width:570px) {
 
-        h4.project-title {
+        .project-title {
             font-size: 1.4rem
         }
 

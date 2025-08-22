@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("theme-toggle");
 
-    //Theme Toggle
+    // === Theme Toggle ===
     document.documentElement.classList.add("light-mode");
     toggleBtn.checked = false;
 
@@ -12,22 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
             document.documentElement.classList.add("light-mode");
         }
     });
-    // Sticky Header when main header scrolls out of view
+
+    // === Sticky Header ===
     const mainHeader = document.querySelector("header");
     const stickyHeader = document.getElementById("sticky-header");
     const headerObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
-                stickyHeader.classList.add("active"); // show sticky header
+                stickyHeader.classList.add("active"); 
             } else {
-                stickyHeader.classList.remove("active"); // hide sticky header
+                stickyHeader.classList.remove("active"); 
             }
         });
-    }, { threshold: 0 }); // trigger when any part of header leaves viewport
+    }, { threshold: 0 });
     headerObserver.observe(mainHeader);
 
-
-    // Projects Data
+    // === Projects Data ===
     const projects = [
         {
             id: 1,
@@ -63,8 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    //Render Projects
+ 
     const container = document.getElementById("project-container");
+    const allCards = [];
 
     projects.forEach(project => {
         const section = document.createElement("section");
@@ -72,66 +73,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
         section.innerHTML = `
             <div class="project-card">
-                <img src="${project.image1}" alt="${project.name}" class="project-image top">
-                <img src="${project.image2}" alt="${project.name}" class="project-image">
+                <img src="${project.image1}" class="project-image active">
+                <img src="${project.image2}" class="project-image">
             </div>
             <div class="project-info">
                 <h2>${project.name} <a href="${project.liveLink}" target="_blank" class="project-link-btn">Live</a></h2>
                 <p>${project.desc}</p>
             </div>
         `;
-
         container.appendChild(section);
 
         const card = section.querySelector(".project-card");
         const images = card.querySelectorAll(".project-image");
-        let current = 0;
 
-        // Click-to-toggle card (image) 
+        allCards.push({ images, current: 0, timer: null });
+
+        // === Click-to-toggle (back & forth) ===
         card.addEventListener("click", () => {
-            images[current].style.zIndex = 1;
-            current = (current + 1) % images.length;
-            images[current].style.zIndex = 2;
+            const cardData = allCards.find(c => c.images[0] === images[0]);
+            images.forEach(img => img.classList.remove("active", "prev"));
+
+            // toggle to next or previous image
+            cardData.current = (cardData.current + 1) % images.length;
+            images[cardData.current].classList.add("active");
         });
 
-        //  Timer for card slide (swipe)
-        let timer;
-        const observer = new IntersectionObserver((entries) => {
+        // === IntersectionObserver for auto-swipe and reset ===
+        const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                const topImage = images[0];
-                if (entry.isIntersecting && entry.intersectionRatio > 0.7) {
-                    timer = setTimeout(() => {
-                        topImage.style.transform = "translateX(-100%)";
-                    }, 1710);
+                const cardData = allCards.find(c => c.images[0] === images[0]);
+                if (!cardData) return;
+
+                if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+                    // Swipe forward after 3s
+                    cardData.timer = setTimeout(() => {
+                        images.forEach(img => img.classList.remove("active", "prev"));
+                        cardData.current = (cardData.current + 1) % images.length;
+                        images[cardData.current].classList.add("active");
+                    }, 3000);
                 } else {
-                    clearTimeout(timer);
-                    topImage.style.transform = "translateX(0)";
+                    // Less than half visible → reset to first image
+                    clearTimeout(cardData.timer);
+                    images.forEach(img => img.classList.remove("active", "prev"));
+                    cardData.current = 0;
+                    images[0].classList.add("active");
                 }
             });
-        }, { threshold: 0.7 });
+        }, { threshold: 0.5 });
 
         observer.observe(card);
-    });
-
-    // Fullscreen Nav Toggle
-    const hamburger = document.getElementById("hamburger");
-    const fullscreenNav = document.getElementById("fullscreen-nav");
-    const closeBtn = document.querySelector(".close-btn");
-    // Open nav
-    hamburger.addEventListener("click", () => {
-        fullscreenNav.classList.add("active");
-    });
-
-    // Close nav
-    closeBtn.addEventListener("click", () => {
-        fullscreenNav.classList.remove("active");
-    });
-
-    // Auto-close when a link is clicked
-    const navLinks = fullscreenNav.querySelectorAll("a");
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            fullscreenNav.classList.remove("active");
-        });
     });
 });
